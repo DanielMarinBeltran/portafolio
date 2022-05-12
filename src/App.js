@@ -1,13 +1,12 @@
 import React from "react";
 import Header from "./components/Header/Header";
-import Main from "./components/Main.jsx/Main";
-import ParticlesBackground from "./components/Particles/ParticlesBackground";
+import Hero from "./components/Hero/Hero";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Main/>
+      <Hero/>
     </div>
   );
 }

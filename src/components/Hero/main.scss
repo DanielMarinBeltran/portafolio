@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-$primary-colo: #282c34;
-$font-normal:'Roboto', sans-serif;
+@import '../../assets/styles/index.scss';
 
 .main{
   font-family: $font-normal;
@@ -11,6 +9,8 @@ $font-normal:'Roboto', sans-serif;
   h2{
     font-weight: 600;
     font-size: 40px;
+    text-decoration: underline;
+    text-decoration-color: aqua;
   }
   h4{
     font-weight: 500;
@@ -23,16 +23,20 @@ $font-normal:'Roboto', sans-serif;
     height: 50px;
     margin: 10px 10px 10px 10px;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px 0px $primary-colo;
+    box-shadow: $priamry-shadow;
   }
   .container--picture{
     display: flex;
     justify-content: center;
+    display: flex;
+    margin: 1rem auto ;
+
   }
   .profile--picture{
     width: 250px;
     height: 300px;
     border-radius: 20px;
     justify-self: center;
+    box-shadow: $priamry-shadow;
   }
 }

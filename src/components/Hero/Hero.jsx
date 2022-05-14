@@ -13,7 +13,7 @@ import './main.scss'
 function Hero() {
   return (
     <div className='main'>
-      <Grid container spacing={2}>
+      <Grid container >
         <Grid item md={6}>
           <Typography  variant='h2'>
             ¡Hola! Soy Daniel Marin

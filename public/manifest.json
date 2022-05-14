@@ -18,11 +18,11 @@
     }
   ],
   "lang": "es-MX",
-  "name": "PWA Daniel Marin",
+  "name": "Daniel Marin",
   "orientation": "portrait",
   "prefer_related_application": false,
   "scope": "/",
-  "short_name": "PWA DM",
+  "short_name": "DM",
   "start_url": "/",
   "theme_color": "orange"
 }

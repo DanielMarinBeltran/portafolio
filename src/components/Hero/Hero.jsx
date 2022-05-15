@@ -22,7 +22,7 @@ function Hero() {
             Front-End Web Developer
           </Typography>
           <Typography variant='body2'>
-          Welcome to my virtual …… this is my way to give back all the help that I got from the development community, here you will find my blog, with information about technologies that I have learned during the years, also some projects related to technologies, I hope you will find it helpful.
+          Welcome to my virtual space this is my way to give back all the help that I got from the development community, here you will find my blog, with information about technologies that I have learned during the years, also some projects related to those technologies, I hope you will find it helpful.
           </Typography>
           <Box className='main-container--img'>
             <img src={html} alt="html logo" />

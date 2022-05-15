@@ -1,0 +1,35 @@
+@import '../../assets/styles/index.scss';
+
+.articles{
+  font-family: $font-normal;
+  width: 80%;
+  margin: 5% auto;
+  .articles-boxs{
+    margin-top: 0.5rem;
+    .article-box__all{
+      margin-top: 10px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: fit-content;
+      width: 100%;
+      border-radius: 10px;
+      background-color: $primary-colo;
+      box-shadow: $priamry-shadow;
+      .article-box__title{
+        padding: 15px;
+      }
+      .article-box__tags{
+        color: $primary-colo;
+        display: flex;
+        justify-self: end;
+        border: 1px solid white ;
+        border-radius: 10px;
+        background-color: beige;
+        margin-right: 10px;
+        padding: 3px;
+      }
+    }
+  }
+}

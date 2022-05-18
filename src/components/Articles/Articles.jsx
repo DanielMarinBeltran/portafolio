@@ -1,6 +1,7 @@
 import './articles.scss'
 import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Articles() {
 	return (
@@ -14,12 +15,14 @@ function Articles() {
           </Box>
         </Grid>
         <Grid className='articles-boxs' item xs={12} md={12}>
-          <Box className='article-box__all'>
-            <Typography variant='body2' className='article-box__title'>First steps with Redux</Typography>
-            <Box className='article-box__tags'>
-              <Typography>React</Typography>
+          <Link style={{textDecoration:'none'}} to='/FirstStepsWithRedux'>
+            <Box className='article-box__all'>
+              <Typography variant='body2' className='article-box__title'>First steps with Redux</Typography>
+              <Box className='article-box__tags'>
+                <Typography>React</Typography>
+              </Box>
             </Box>
-          </Box>
+          </Link>
           <Box className='article-box__all'>
             <Typography variant='body2' className='article-box__title'>How to use Local Storage in React</Typography>
             <Box className='article-box__tags'>

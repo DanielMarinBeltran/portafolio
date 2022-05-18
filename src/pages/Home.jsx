@@ -7,7 +7,7 @@ import LastProjects from "../components/LastProjects/LastProjects";
 
 function Home() {
   return (
-    <div className="App">
+    <div style={{backgroundColor:'#eeeeee'}}>
       <Header />
       <Hero />
       <Articles />

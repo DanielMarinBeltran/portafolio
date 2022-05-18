@@ -9,14 +9,17 @@ import {
 	Container,
 	Button,
 	MenuItem,
+	useMediaQuery,
+  useTheme,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 
-const pages = [ 'Home', 'Blog', 'Contact' ];
-const theme = createTheme({
+const pages = [ 'Home', 'Blog', 'Projects', 'Contact' ];
+const colors = createTheme({
 	status: {
 		danger: '#e53e3e'
 	},
@@ -53,7 +56,7 @@ const Header = () => {
 			// Stash the event so it can be triggered later.
 			window.deferredPrompt = event;
 			// Remove the 'hidden' class from the install button container.
-			setIsReadyForInstall(true);
+			// setIsReadyForInstall(true);
 		});
 	}, []);
 
@@ -76,9 +79,11 @@ const Header = () => {
 		// Hide the install button.
 		setIsReadyForInstall(false);
 	}
+	const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
 
 	return (
-		<ThemeProvider theme={theme}>
+		<ThemeProvider theme={colors}>
 			<AppBar variant="" position="static">
 				<Container maxWidth="xl">
 					<Toolbar disableGutters>
@@ -167,7 +172,7 @@ const Header = () => {
 								</Button>
 							))}
 						</Box>
-						{isReadyForInstall && <Button onClick={downloadApp} variant="contained">Download</Button>}
+						{isReadyForInstall && <Button onClick={downloadApp} variant="contained">{isMatch ? <>Download</> :  <FileDownloadIcon />}</Button>}
 					</Toolbar>
 				</Container>
 			</AppBar>

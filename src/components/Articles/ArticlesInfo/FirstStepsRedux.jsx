@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import reduxDependecies from '../../../assets/imgs/reduxDependecies.png'
+import folderReduxStorejs from '../../../assets/imgs/folderReduxStorejs.png'
 import './firstStepsRedux.scss'
 
 function FirstStepsRedux() {
@@ -24,6 +25,7 @@ function FirstStepsRedux() {
         <Typography><strong>React-redux</strong> is the library that has functions to connect our App of create-react-app with redux.</Typography>
         <Typography><strong>Redux-thunk</strong> is a way to use async functions in redux.</Typography>
         <Typography>After we have installed all the dependecies we can proceed to create a folder named redux in the src folder and create the file named <strong>store.js</strong> as the picture bellow</Typography>
+        <img src={folderReduxStorejs} alt="folder redux storejs" />
       </Box>
     </div>
   )

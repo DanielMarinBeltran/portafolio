@@ -24,7 +24,7 @@ function FirstStepsRedux() {
         <Typography><strong>Redux</strong> is a library as it says from Redux.</Typography>
         <Typography><strong>React-redux</strong> is the library that has functions to connect our App of create-react-app with redux.</Typography>
         <Typography><strong>Redux-thunk</strong> is a way to use async functions in redux.</Typography>
-        <Typography>After we have installed all the dependecies we can proceed to create a folder named redux in the src folder and create the file named <strong>store.js</strong> as the picture bellow</Typography>
+        <Typography>After we have installed all the dependecies we can proceed to create a folder named redux in the src folder and, then create the file named <strong>store.js</strong> and a folder named <strong>reducers</strong> (inside of this folder we will create a file named <strong>reducers</strong>, here is where we will create the reducers that we will use in every segment of our App) also a folder named <strong>types</strong>, and a last one named <strong>actions</strong> as the picture bellow</Typography>
         <img src={folderReduxStorejs} alt="folder redux storejs" />
       </Box>
     </div>

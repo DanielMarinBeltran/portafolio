@@ -18,23 +18,28 @@ function Articles() {
           <Link style={{textDecoration:'none'}} to='/FirstStepsWithRedux'>
             <Box className='article-box__all'>
               <Typography variant='body2' className='article-box__title'>First steps with Redux</Typography>
-              <Box className='article-box__tags'>
-                <Typography>React</Typography>
+              <Box className='article-box'>
+                <Typography className='article-box__tags'>React</Typography>
+                <Typography className='article-box__tags'>Redux</Typography>
               </Box>
             </Box>
           </Link>
-          <Box className='article-box__all'>
-            <Typography variant='body2' className='article-box__title'>How to use Local Storage in React</Typography>
-            <Box className='article-box__tags'>
-              <Typography>React</Typography>
+          <Link style={{textDecoration:'none'}} to='/InConstruction'>
+            <Box className='article-box__all'>
+              <Typography variant='body2' className='article-box__title'>How to use Local Storage in React</Typography>
+              <Box className='article-box'>
+                <Typography className='article-box__tags'>React</Typography>
+              </Box>
             </Box>
-          </Box>
-          <Box className='article-box__all'>
-            <Typography variant='body' className='article-box__title'>How to add PWA in React</Typography>
-            <Box className='article-box__tags'>
-              <Typography>React</Typography>
+          </Link>
+          <Link style={{textDecoration:'none'}} to='/InConstruction'>
+            <Box className='article-box__all'>
+              <Typography variant='body' className='article-box__title'>How to add PWA in React</Typography>
+              <Box className='article-box'>
+                <Typography className='article-box__tags'>React</Typography>
+              </Box>
             </Box>
-          </Box>
+          </Link>
         </Grid>
 			</Grid>
 		</div>

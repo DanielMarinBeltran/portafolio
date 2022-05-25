@@ -10,13 +10,14 @@ import {
 	Button,
 	MenuItem,
 	useMediaQuery,
-  useTheme,
+	useTheme
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import logoHeader from '../../assets/imgs/logoHeader.png';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
-import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
+import { Link } from 'react-router-dom';
 
 const pages = [ 'Home', 'Blog', 'Projects', 'Contact' ];
 const colors = createTheme({
@@ -61,18 +62,18 @@ const Header = () => {
 	}, []);
 
 	async function downloadApp() {
-		console.log("👍", "butInstall-clicked");
+		console.log('👍', 'butInstall-clicked');
 		const promptEvent = window.deferredPrompt;
 		if (!promptEvent) {
 			// The deferred prompt isn't available.
-			console.log("oops, no prompt event guardado en window");
+			console.log('oops, no prompt event guardado en window');
 			return;
 		}
 		// Show the install prompt.
 		promptEvent.prompt();
 		// Log the result
 		const result = await promptEvent.userChoice;
-		console.log("👍", "userChoice", result);
+		console.log('👍', 'userChoice', result);
 		// Reset the deferred prompt variable, since
 		// prompt() can only be called once.
 		window.deferredPrompt = null;
@@ -80,14 +81,16 @@ const Header = () => {
 		setIsReadyForInstall(false);
 	}
 	const theme = useTheme();
-  const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
+	const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
 
 	return (
 		<ThemeProvider theme={colors}>
 			<AppBar variant="" position="static">
 				<Container maxWidth="xl">
 					<Toolbar disableGutters>
-						<AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+						{isMatch ? null : (
+							<img src={logoHeader} alt="logo header" style={{ width: '2em', marginRight: '1rem' }} />
+						)}
 						<Typography
 							variant="h6"
 							noWrap
@@ -135,14 +138,28 @@ const Header = () => {
 									display: { xs: 'block', md: 'none' }
 								}}
 							>
-								{pages.map((page) => (
-									<MenuItem key={page} onClick={handleCloseNavMenu}>
-										<Typography textAlign="center">{page}</Typography>
+								<Link style={{ textDecoration: 'none' }} to="/">
+									<MenuItem onClick={handleCloseNavMenu}>
+										<Typography textAlign="center">HOME</Typography>
 									</MenuItem>
-								))}
+								</Link>
+								<Link style={{ textDecoration: 'none' }} to="/InConstruction">
+									<MenuItem onClick={handleCloseNavMenu}>
+										<Typography textAlign="center">BLOGS</Typography>
+									</MenuItem>
+								</Link>
+								<Link style={{ textDecoration: 'none' }} to="/InConstruction">
+									<MenuItem onClick={handleCloseNavMenu}>
+										<Typography textAlign="center">PROJECTS</Typography>
+									</MenuItem>
+								</Link>
+								<Link style={{ textDecoration: 'none' }} to="/InConstruction">
+									<MenuItem onClick={handleCloseNavMenu}>
+										<Typography textAlign="center">CONTACT</Typography>
+									</MenuItem>
+								</Link>
 							</Menu>
 						</Box>
-						<AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
 						<Typography
 							variant="h5"
 							noWrap
@@ -162,17 +179,32 @@ const Header = () => {
 							Daniel Marin
 						</Typography>
 						<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-							{pages.map((page) => (
-								<Button
-									key={page}
-									onClick={handleCloseNavMenu}
-									sx={{ my: 2, color: 'white', display: 'block' }}
-								>
-									{page}
+							<Link to="/" style={{ textDecoration: 'none', color:'#282c34' }}>
+								<Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
+									HOME
 								</Button>
-							))}
+							</Link>
+							<Link to="/InConstruction" style={{ textDecoration: 'none' }}>
+								<Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
+									BLOGS
+								</Button>
+							</Link>
+							<Link to="/InConstruction" style={{ textDecoration: 'none' }}>
+								<Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
+									PROJECTS
+								</Button>
+							</Link>
+							<Link to="/InConstruction" style={{ textDecoration: 'none' }}>
+								<Button onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
+									CONTACT
+								</Button>
+							</Link>
 						</Box>
-						{isReadyForInstall && <Button onClick={downloadApp} variant="contained">{isMatch ? <>Download</> :  <FileDownloadIcon />}</Button>}
+						{isReadyForInstall && (
+							<Button onClick={downloadApp} variant="contained">
+								{isMatch ? <FileDownloadIcon /> : <div>Download</div>}
+							</Button>
+						)}
 					</Toolbar>
 				</Container>
 			</AppBar>

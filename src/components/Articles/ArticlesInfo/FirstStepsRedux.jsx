@@ -160,7 +160,7 @@ function FirstStepsRedux() {
 				<Typography className="paragraph">
 					In the green square is where we make a try so it will make the attempt of an API request, for this
 					we will use the "await", so it will wait for the answer, in case that the request{' '}
-					<b>get</b> is success, the code will use the dispatch to execute the function<b>categoriasActionGetSuccess(response.data.drinks)</b>,
+					<b>get</b> is success, the code will use the dispatch to execute the function <b>categoriasActionGetSuccess (response.data.drinks)</b>,
 					what happens here is that it will receive the response and will be used to add it to the initial
 					state, the function has the following:
 				</Typography>
@@ -169,7 +169,7 @@ function FirstStepsRedux() {
 				</Box>
 				<Typography className="paragraph">
 					In the blue square, the <b>catch</b> in case that the request <b>get</b> is
-					error, the code will execute the function <b>categoriasActionGetError(error.response)</b>{' '}
+					error, the code will execute the function <b>categoriasActionGetError (error.response)</b>{' '}
 					will receive the error and the error will be used to add it to the error state in the reducer, the
 					function has the following:
 				</Typography>

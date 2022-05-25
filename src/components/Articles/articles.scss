@@ -21,15 +21,18 @@
       .article-box__title{
         padding: 15px;
       }
-      .article-box__tags{
-        color: $primary-colo;
+      .article-box{
         display: flex;
-        justify-self: end;
-        border: 1px solid white ;
-        border-radius: 10px;
-        background-color: beige;
-        margin-right: 10px;
-        padding: 3px;
+        .article-box__tags{
+          color: $primary-colo;
+          display: flex;
+          justify-self: end;
+          border: 1px solid white ;
+          border-radius: 10px;
+          background-color: beige;
+          margin-right: 10px;
+          padding: 3px;
+        }
       }
     }
   }

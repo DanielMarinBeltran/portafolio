@@ -7,6 +7,9 @@
   h5:nth-child(1){
     margin-top:5rem;
   }
+  h6{
+    text-decoration: underline;
+  }
   .title-container{
     h1{
       font-weight: 500;
@@ -49,6 +52,7 @@
     margin: 20px 0 20px 0;
     img{
       width: 80%;
+      border-radius: 10px;
     }
   }
 }

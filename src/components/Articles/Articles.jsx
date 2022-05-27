@@ -24,7 +24,7 @@ function Articles() {
               </Box>
             </Box>
           </Link>
-          <Link style={{textDecoration:'none'}} to='/InConstruction'>
+          <Link style={{textDecoration:'none'}} to='/LocalStorage'>
             <Box className='article-box__all'>
               <Typography variant='body2' className='article-box__title'>How to use Local Storage in React</Typography>
               <Box className='article-box'>

@@ -43,7 +43,6 @@
     justify-content: center;
     display: flex;
     margin: 1rem auto ;
-
   }
   .profile--picture{
     width: 250px;
@@ -51,5 +50,8 @@
     border-radius: 20px;
     justify-self: center;
     box-shadow: $priamry-shadow;
+    @media (min-width: $layout-breakpoint-small){
+      width: 320px;
+    }
   }
 }

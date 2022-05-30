@@ -3,7 +3,7 @@ import Articles from "../../components/Articles/Articles";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
-import LastProjects from "../../components/LastProjects/LastProjects";
+import { Projects } from "../../components/Projects/Projects";
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
       <Header />
       <Hero />
       <Articles />
-      <LastProjects />
+      <Projects />
       <Footer />
     </div>
   )

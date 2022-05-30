@@ -56,7 +56,7 @@ function Hero() {
 						<img onClick={() => setValue(70)} src={react} alt="react logo" />
 						<img onClick={() => setValue(60)} src={material} alt="material logo" />
 						<img onClick={() => setValue(50)} src={python} alt="python logo" />
-						{value != 0 && (
+						{value !== 0 && (
 							<Box>
                 { spinner ?
                   <Box className='main-container__spinner'>

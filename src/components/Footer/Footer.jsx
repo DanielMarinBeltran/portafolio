@@ -1,4 +1,4 @@
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import './footer.scss';
 import logoGithub from '../../assets/imgs/github-logo.png';

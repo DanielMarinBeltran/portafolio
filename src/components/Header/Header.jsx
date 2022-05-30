@@ -19,7 +19,6 @@ import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
 import { Link } from 'react-router-dom';
 
-const pages = [ 'Home', 'Blog', 'Projects', 'Contact' ];
 const colors = createTheme({
 	status: {
 		danger: '#e53e3e'

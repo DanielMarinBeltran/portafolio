@@ -25,12 +25,12 @@ function Footer() {
 				</Grid>
 				<Grid xs={12} md={12} className="footer-bottom-section__size">
 					<Grid container className='footer-bottom-section__space'>
-						<Grid item md={6}>
+						<Grid item xs={6} md={6}>
               <a href='https://github.com/DanielMarinBeltran'>
 							  <img src={logoGithub} alt="github logo" />
               </a>
 						</Grid>
-						<Grid item md={6}>
+						<Grid item xs={6} md={6}>
               <a href='https://www.linkedin.com/in/daniel-marin-665734201/'>
   							<img src={logoLinkedIn} alt="logo linked in" />
               </a>

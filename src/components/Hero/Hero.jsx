@@ -12,6 +12,7 @@ import sass from '../../assets/imgs/sass.png';
 import python from '../../assets/imgs/python.png';
 import material from '../../assets/imgs/material-ui.png';
 import './main.scss';
+import SkillsBar from "../Profiencies";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 	height: 10,
@@ -38,8 +39,8 @@ function Hero() {
 
 	return (
 		<div className="main">
-			<Grid container>
-				<Grid item md={6}>
+			<Grid className='main-container' container>
+				<Grid item md={12} lg={7}>
 					<Typography variant="h2">¡Hello! I'm Daniel Marin</Typography>
 					<Typography variant="h4">Front-End Web Developer</Typography>
 					<Typography variant="body2">
@@ -48,7 +49,8 @@ function Hero() {
 						have learned during the years, also some projects related to those technologies, I hope you will
 						find it helpful.
 					</Typography>
-					<Box className="main-container--img">
+					<SkillsBar />
+					{/* <Box className="main-container--img">
 						<img onClick={() => setValue(80)} src={html} alt="html logo" />
 						<img onClick={() => setValue(70)} src={css} alt="css logo" />
 						<img onClick={() => setValue(60)} src={sass} alt=" sass logo" />
@@ -70,9 +72,9 @@ function Hero() {
                 }
 							</Box>
 						)}
-					</Box>
+					</Box> */}
 				</Grid>
-				<Grid className="container--picture" item md={6}>
+				<Grid className="container--picture" item sm={12} md={12} lg={5}>
 					<img className="profile--picture" src={foto} alt="foto principal" />
 				</Grid>
 			</Grid>

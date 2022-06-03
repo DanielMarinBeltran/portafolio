@@ -4,8 +4,15 @@
   font-family: $font-normal;
   justify-content: center;
   margin: 5% auto;
+  margin-bottom: 0;
   width: 80%;
   // height: 100vh;
+  .main-container{
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   h2{
     font-weight: 600;
     font-size: 40px;
@@ -45,12 +52,12 @@
     margin: 1rem auto ;
   }
   .profile--picture{
-    width: 250px;
-    // height: 300px;
+    width: 70%;
+    height: 90%;
     border-radius: 20px;
     justify-self: center;
     box-shadow: $priamry-shadow;
-    @media (min-width: $layout-breakpoint-small){
+    @media (max-width: $layout-breakpoint-small){
       width: 320px;
     }
   }
